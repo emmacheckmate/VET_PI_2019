@@ -12,7 +12,7 @@ class Mascotas extends Migration
      */
     public function up()
     {
-        Schema::create('mascotas',function(blueprint $tablaMascotas ) 
+        Schema::create('mascotas',function( Blueprint $tablaMascotas ) 
         {
             $tablaMascotas->increments('Id');  //ID para cada mascota
             $tablaMascotas->intenger('IdDueno'); //Clave Foranea del dueño
@@ -32,6 +32,6 @@ class Mascotas extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('mascotas');
     }
 }

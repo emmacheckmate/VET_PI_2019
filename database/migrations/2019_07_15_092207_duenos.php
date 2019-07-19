@@ -19,7 +19,7 @@ class Duenos extends Migration
             $tablaDueno->string('Nombre',100 ); // nombre del cliente
             $tablaDueno->string('Ap_P',100 ); // apellido parterno del cliente
             $tablaDueno->string('Ap_M',100 ); //apellido materno  del cliente
-            $tablaDueno->string('Tel',10 ); //telefono del cliente
+            $tablaDueno->string('Tel',100 ); //telefono del cliente
             $tablaDueno->string('Dir',100 ); //direccion del cliente
             $tablaDueno->string('Cel',10 ); //celular del cliente
             $tablaDueno->string('Correo',100 ); //corrreo electronico del cliente
@@ -37,6 +37,6 @@ class Duenos extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('duenos');
     }
 }

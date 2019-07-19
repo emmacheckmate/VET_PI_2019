@@ -13,19 +13,19 @@ class Medicamentos extends Migration
      */
     public function up()
     {
-        Schema::create('medicamentos',function(blueprint $tablaMedicamentos ) 
+        Schema::create('medicamentos',function( Blueprint $tablaMedicamentos ) 
         {
             $tablaMedicamentos->increments('Id');//clave primaria para el medicamento
             $tablaMedicamentos->string('Nombre',100 );// nombre del medicamento
             $tablaMedicamentos->string('Presentacion',100 );//tipo de presentacion para el medicamento
-            $tablaMedicamentos->string('ml_mg',100 );//Si es en militros o miligramos
+            $tablaMedicamentos->ntenger('ml_mg');//Si es en militros o miligramos
             $tablaMedicamentos->string('Compuesto',100 ); //Tipo de compuesto del medicamento 
-            $tablaMedicamentos->string('Precio',100 ); //costo del medicamento
+            $tablaMedicamentos->float('Precio',8,2 ); //costo del medicamento
             $tablaMedicamentos->string('Laboratorio',100 ); //Labotoratorio en el que se producio
-            $tablaMedicamentos->string('Paq_unidad',100 ); //Es por paquetes  o por unidades
-            $tablaMedicamentos->intenger('Controlado'); //Tipo de medicamento controlado
+            $tablaMedicamentos->intenger('Paq_unidad'); //Es por paquetes  o por unidades
+            $tablaMedicamentos->intenger('Controlado'); //Tipo de medicamento controlado bandera
             $tablaMedicamentos->string('Fecha_Caducidad',100 ); //fecha en el que caduca el medicamento
-            $tablaMedicamentos->intenger('Stock',100 ); // cuantos existen en stock
+            $tablaMedicamentos->intenger('Stock'); // cuantos existen en stock
             $tablaMedicamentos->intenger('Vacuna'); //bandera
         } );
     }
@@ -37,6 +37,6 @@ class Medicamentos extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('medicamentos');
     }
 }

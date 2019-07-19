@@ -13,7 +13,7 @@ class Ayudantes extends Migration
      */
     public function up()
     {
-        Schema::create('ayudantes',function(blueprint $tablaAyundates ) 
+        Schema::create('ayudantes',function( Blueprint $tablaAyundates ) 
         {
             $tablaAyudantes->increments('Id'); //clave primaria para ayudantes
             $tablaAyudantes->intenger('IdUsr');// clave externa de usuario 
@@ -27,6 +27,6 @@ class Ayudantes extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('ayudantes');
     }
 }
