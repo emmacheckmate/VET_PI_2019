@@ -18,9 +18,9 @@ class DetArticuloMigracion extends Migration
             $tablaDetArticulo->increments('Id'); //Id DetArticulo
             $tablaDetArticulo->intenger('IdArticulo');//Id Articulo
             $tablaDetArticulo->intenger('IdMascota'); //IdMascota
-            $tablaDetArticulo->intenger('IdMascota'); //IdMascota
-
-
+            $tablaDetArticulo->date('Fecha'); //fechadet_articurlo
+            $tablaDetArticulo->integer('IdVenta'); //id venta
+            $tablaDetArticulo->string('Talla',10); //Talla detArticulo
         } );
     
     }
@@ -32,6 +32,6 @@ class DetArticuloMigracion extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('detArticulo');
     }
 }
