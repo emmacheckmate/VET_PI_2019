@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*Esta ruta regresa una vista de los dueños de las mascotas */
+Route::get('duenos',function (){
+    
+}
+);
+
+/*regresa una vista de las mascotas*/
+Route::get('mascotas',function()
+{
+}
+);
