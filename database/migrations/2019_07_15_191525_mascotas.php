@@ -14,14 +14,14 @@ class Mascotas extends Migration
     {
         Schema::create('mascotas',function(blueprint $tablaMascotas ) 
         {
-            $tablaMascotas->increments('Id'); 
-            $tablaMascotas->string('IdDueno',100 );
-            $tablaMascotas->string('Nombre',100 );
-            $tablaMascotas->string('Edad',100 ); 
-            $tablaMascotas->string('Especie',10 );
-            $tablaMascotas->string('Raza',100 ); 
-            $tablaMascotas->string('Foto',10 ); 
-            $tablaMascotas->string('PrefDoc',100 ); 
+            $tablaMascotas->increments('Id');  //ID para cada mascota
+            $tablaMascotas->intenger('IdDueno'); //Clave Foranea del dueño
+            $tablaMascotas->string('Nombre',100 );//Nombre de la mascota
+            $tablaMascotas->string('Edad',100 ); //Edad de la mascota
+            $tablaMascotas->string('Especie',10 );//Nombre de la especie de la mascota
+            $tablaMascotas->string('Raza',100 ); //Raza de la mascota
+            $tablaMascotas->string('Foto',100); //Foto de la mascota
+            $tablaMascotas->intenger('PrefDoc');  //Id del doctor
         } );
     }
 

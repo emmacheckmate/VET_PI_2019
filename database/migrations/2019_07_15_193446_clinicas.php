@@ -15,9 +15,9 @@ class Clinicas extends Migration
     {
         Schema::create('clinicas',function(blueprint $tablaClinicas ) 
         {
-            $tablaClinicas->increments('Id'); 
-            $tablaClinicas->string('Nombre',100 );
-            $tablaClinicas->string('Direccion',100 );
+            $tablaClinicas->increments('Id'); //clave primaria para la clinica
+            $tablaClinicas->string('Nombre',100 ); //nombre de la clinica
+            $tablaClinicas->string('Direccion',100 );//dirección de la clinica
         } );
     }
 

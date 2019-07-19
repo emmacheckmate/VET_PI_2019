@@ -15,19 +15,19 @@ class Doctores extends Migration
     {
         Schema::create('doctores',function(blueprint $tablaDoctores ) 
         {
-            $tablaDoctores->increments('Id'); 
-            $tablaDoctores->string('Nombre',100 );
-            $tablaDoctores->string('Ap_P',100 );
-            $tablaDoctores->string('Ap_M',100 ); 
-            $tablaDoctores->string('Cedula',10 );
-            $tablaDoctores->string('Tel',100 ); 
-            $tablaDoctores->string('Correo',10 ); 
-            $tablaDoctores->string('Cel',100 ); 
-            $tablaDoctores->string('Dir',100 ); 
-            $tablaDoctores->string('Esp1',100 ); 
-            $tablaDoctores->string('Esp2',100 ); 
-            $tablaDoctores->string('Urgencia',100 ); 
-            $tablaDoctores->string('IdUs1',100 ); 
+            $tablaDoctores->increments('Id');  //ID para lo doctor
+            $tablaDoctores->string('Nombre',100 ); //Nombre del doctor
+            $tablaDoctores->string('Ap_P',100 );//Apellido Paterno
+            $tablaDoctores->string('Ap_M',100 ); //Apellido Materno
+            $tablaDoctores->string('Cedula',100 );//Cedula Profesional del Doctor
+            $tablaDoctores->string('Tel',100 ); //Telefono del doctor
+            $tablaDoctores->string('Correo',100 ); //Email del doctor
+            $tablaDoctores->string('Cel',100 ); //Celular del doctor
+            $tablaDoctores->string('Dir',100 ); //Direccion del doctor
+            $tablaDoctores->string('Esp1',100 ); //1er Especialidad  del doctor
+            $tablaDoctores->string('Esp2',100 ); //2da Especialidad del doctor
+            $tablaDoctores->string('Urgencia',100 ); //Urgencia 
+            $tablaDoctores->intenger('IdUs1'); //Clave externa - Id usurio 
         } );
     }
 
